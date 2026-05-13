@@ -1,6 +1,6 @@
 {
-  "name": "wxt-vue-starter",
-  "description": "manifest.json description",
+  "name": "cyrillic-input-translit",
+  "description": "Rewrite typed Cyrillic in editable fields with a custom transliteration map.",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,16 +11,12 @@
     "build:firefox": "wxt build -b firefox",
     "zip": "wxt zip",
     "zip:firefox": "wxt zip -b firefox",
-    "compile": "vue-tsc --noEmit",
+    "typecheck": "tsc --noEmit",
     "postinstall": "wxt prepare"
   },
-  "dependencies": {
-    "vue": "^3.5.29"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@wxt-dev/module-vue": "^1.0.3",
     "typescript": "^5.9.3",
-    "vue-tsc": "^3.2.5",
     "wxt": "^0.20.26",
     "@types/bun": "latest"
   }
