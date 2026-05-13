@@ -5,19 +5,19 @@ WXT + TypeScript browser extension that rewrites only typed Cyrillic text inside
 ## Install
 
 ```sh
-pnpm install
+bun install
 ```
 
 ## Run Firefox Dev
 
 ```sh
-pnpm dev:firefox
+bun dev:firefox
 ```
 
 ## Build Firefox
 
 ```sh
-pnpm build:firefox
+bun build:firefox
 ```
 
 ## Usage

@@ -1,6 +1,15 @@
+import { createContentApp } from '../src/content/app';
+
+const INSTANCE_KEY = '__cyrillicInputTranslitExtension' as const;
+
 export default defineContentScript({
-  matches: ['*://*.google.com/*'],
+  matches: ['<all_urls>'],
+  runAt: 'document_start',
   main() {
-    console.log('Hello content.');
+    const instanceWindow = window as Window & { [INSTANCE_KEY]?: boolean };
+    if (instanceWindow[INSTANCE_KEY]) return;
+
+    instanceWindow[INSTANCE_KEY] = true;
+    createContentApp().start();
   },
 });
